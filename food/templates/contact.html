@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% load static %}
+
+        {% block style %}
+
+            body{
+                background-image:url("{% static 'images/c.jpg' %}");
+                background-size:cover;
+                background-repeat:no-repeat;
+                }
+                
+
+            .container{
+        
+                    left: 12vw;
+                     top: 5vw;
+                     color:white;
+                position:relative;
+                border-radius:2px;
+
+            }
+
+            .f{
+                padding:7px;
+            }
+        {% endblock style %}
+
+        {% block body %}
+             <div class="container">
+           <form method="POST" action="">
+                {% csrf_token %}
+                <div class="f"><label "f" for="name">Name:</label><br>
+                <input type ="text" name="name" id="name"></div>
+
+                <div class="f"><label for="email">E-mail:</label><br>
+                <input type ="mail" name="email" id="email"></div>
+
+                {% comment %} <div class="f"><label for="phone">Phone Number:</label><br>
+                <input type ="number" name="phone" id="phone"></div> {% endcomment %}
+                <div class="f"><label for="itam1">Phone:</label><br>
+                <input type="text" name="itam1" id="itam1"></div>
+                <div class="f"><button type ="submit" class="btn btn-danger">SUBMIT</button></div>
+
+           </form>
+        </div>
+        {% endblock body %}

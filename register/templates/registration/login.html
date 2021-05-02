@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    LOGIN
+{% endblock title %}
+
+{%load crispy_forms_tags%}
+
+{% block style %}
+    .pos{
+        left:40vw;
+        top:10vw;
+        position:relative;
+    }    
+
+    .aa a{
+              border-radius:10px;
+              padding-top:1px;
+              padding-bottom:1px;
+              color:black;
+
+            }
+{% endblock style %}
+
+
+
+{% block body %}
+    <div class="pos">
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <button type="submit" class="btn btn-danger">Login</button>
+        <p>Dont have an account ?</p>
+    </form>
+        <div class ="aa"> <a href="/register"><b>Register Here!</b></a><div>
+    </div>
+{% endblock body %}
+

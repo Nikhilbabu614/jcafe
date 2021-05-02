@@ -1,0 +1,401 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block style %}
+  .contain{
+    left: 4vw;
+    right: 86vw;
+    position:absolute;
+  }
+
+  my-3 {
+    margin-top: 7rem!important;
+    margin-bottom: 1rem!important;
+  }
+
+  .or{
+    left: 75vw;
+    right: 17vw;
+    top: 68px;
+    bottom:;
+    position: absolute;
+
+  }
+  .orr{
+    left: 45vw;
+    right: 40vw;
+    top: 73px;
+    bottom:;
+    position: absolute;
+
+  }
+
+  .men{
+    margin:auto;
+  }
+  
+
+
+{% endblock style %}
+
+
+{% block body %}
+    <div class="contain my-3">
+  <a class="nav-item dropdown nav-link dropdown-toggle cen" href="/menu" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                   <b> Category</b>
+                  </a>
+                <ul class="dropdown-menu cen" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#fastfood">Fastfood</a></li>
+                  <li><a class="dropdown-item" href="#drinks">Smoothies & drinks</a></li>
+                  {% comment %} <li><hr class="dropdown-divider"></li> {% endcomment %}
+                  <li><a class="dropdown-item" href="#rolls">Rolls & Snacks</a></li>
+                </ul>
+  </div>
+  
+
+<div class="men">
+  <form method="POST" action="">
+    {% csrf_token %}
+
+    <div class ="orr">
+      <input type="text" name="Recipent" id="Recipent" placeholder="Recipents's name" required>
+    </div>
+
+     <div class="or">
+         <button type ="submit" class="btn btn-danger"><b>ORDER</b></button>
+    </div>
+    <br></br>
+    <a name = "fastfood"></a>
+    <div class="container my-3">
+      <div class="my-3 text-center"> <h1>FAST-FOOD</h1></div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/f1.jpg' %}" height="400px" width="358px">
+            <div class="card-body">
+              <p class="card-text"><h3>Noodles</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Noodles" id ="Noodles">
+                    <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/f2.jpg' %}" height="400px" width="358px">
+            
+            <div class="card-body">
+              <p class="card-text"><h3>Fried Rice</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="FriedRice" id="FriedRice">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/f3.jpg' %}" height="400px" width="358px">
+            <div class="card-body">
+              <p class="card-text"><h3>Manchurian</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Manchurian" id="Manchurian">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/f4.jpg' %}" height="400px" width="358px">
+            <div class="card-body">
+              <p class="card-text"><h3>Chicken 65</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Chicken65" id="Chicken65">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/f5.png' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Veg - Fullmeal</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="VegMeal" id="VegMeal">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a name="drinks"></a>
+    <div class="container my-3">
+      <div class="my-3 text-center"><h1>DRINKS & SMOOTHIES</h1></div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/d1.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Coke</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Coke" id="Coke">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/d2.jpg' %}" height="400px" width="358px">
+
+            
+            <div class="card-body">
+              <p class="card-text"><h3>Cofee</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Coffee" id="Coffee">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/d3.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Tea</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Tea" id="Tea">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/d5.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Fruit Juices</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="FruitJucies" id="FruitJucies">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/d6.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Smoothies</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Smoothies" id="Smoothies">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <a name="rolls"></a>
+  <div class="container my-3">
+      <div class="my-3 text-center">  <h1>SNACKS & ROLLS </h1></div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/r1.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Burger</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Burger" id="Burger">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/r2.jpg' %}" height="400px" width="358px">
+
+            
+            <div class="card-body">
+              <p class="card-text"><h3>Veg Roll</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Roll" id="Roll">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/r3.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Puffs</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Puffs" id="Puffs">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/r4.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Chocolates</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Chocolate" id="Chocolate">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="{% static 'images/r5.jpg' %}" height="400px" width="358px">
+
+            <div class="card-body">
+              <p class="card-text"><h3>Paestry</h3></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <select name="Paestry" id="Paestry">
+                   <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <small class="text-muted">Approx . 140 for two</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </form>
+</div>
+  
+{% endblock body %}

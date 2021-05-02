@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}Create an account{% endblock title %}
+{% load crispy_forms_tags%}
+
+{% block style %}
+    .pos{
+        left:35vw;
+        top:2vw;
+        position:relative;
+    }  
+{% endblock style %}
+
+
+{% block body %}
+    <div class="pos">
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class="btn btn-danger">Register</button>
+    </form>    
+    </div>
+{% endblock body %}
